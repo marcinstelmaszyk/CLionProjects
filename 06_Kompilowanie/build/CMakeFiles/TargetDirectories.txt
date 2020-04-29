@@ -1,0 +1,3 @@
+/home/mast/CLionProjects/06_Kompilowanie/build/CMakeFiles/rebuild_cache.dir
+/home/mast/CLionProjects/06_Kompilowanie/build/CMakeFiles/program.dir
+/home/mast/CLionProjects/06_Kompilowanie/build/CMakeFiles/edit_cache.dir

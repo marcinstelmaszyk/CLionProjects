@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/program.dir/src/main.cpp.o  -o program  -L/home/mast/CLionProjects/lib -Wl,-rpath,/home/mast/CLionProjects/lib -lMath 

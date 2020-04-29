@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="08_Bridge" targetName="08_Bridge" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3ca3e1bb-0caf-4614-8e40-73c9c2284129" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1Vw0gDOQUGMlxjb3CC9PtA7tOFQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="08_Bridge" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="08_Bridge" TARGET_NAME="08_Bridge" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="08_Bridge" RUN_TARGET_NAME="08_Bridge">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ca3e1bb-0caf-4614-8e40-73c9c2284129" name="Default Changelist" comment="" />
+      <created>1578148958542</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578148958542</updated>
+      <workItem from="1578148960157" duration="3508000" />
+      <workItem from="1579119038714" duration="77000" />
+      <workItem from="1579119151836" duration="437000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="490" y="452" width="465" height="576" key="#com.intellij.ide.util.MemberChooser" timestamp="1578151986288">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state x="490" y="452" width="465" height="576" key="#com.intellij.ide.util.MemberChooser/52.27.2508.1413@52.27.2508.1413" timestamp="1578151986288" />
+    <state x="460" y="480" width="424" height="520" key="FileChooserDialogImpl" timestamp="1579119575393">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state x="460" y="480" width="424" height="520" key="FileChooserDialogImpl/52.27.2508.1413@52.27.2508.1413" timestamp="1579119575393" />
+    <state width="1179" height="394" key="GridCell.Tab.0.bottom" timestamp="1578154866358">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state width="1179" height="394" key="GridCell.Tab.0.bottom/52.27.2508.1413@52.27.2508.1413" timestamp="1578154866358" />
+    <state width="1179" height="394" key="GridCell.Tab.0.center" timestamp="1578154866358">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state width="1179" height="394" key="GridCell.Tab.0.center/52.27.2508.1413@52.27.2508.1413" timestamp="1578154866358" />
+    <state width="1179" height="394" key="GridCell.Tab.0.left" timestamp="1578154866358">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state width="1179" height="394" key="GridCell.Tab.0.left/52.27.2508.1413@52.27.2508.1413" timestamp="1578154866358" />
+    <state width="1179" height="394" key="GridCell.Tab.0.right" timestamp="1578154866358">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state width="1179" height="394" key="GridCell.Tab.0.right/52.27.2508.1413@52.27.2508.1413" timestamp="1578154866358" />
+    <state x="338" y="561" key="com.intellij.ide.util.TipDialog" timestamp="1579119168384">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state x="338" y="561" key="com.intellij.ide.util.TipDialog/52.27.2508.1413@52.27.2508.1413" timestamp="1579119168384" />
+    <state x="345" y="349" width="672" height="678" key="search.everywhere.popup" timestamp="1578149375041">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state x="345" y="349" width="672" height="678" key="search.everywhere.popup/52.27.2508.1413@52.27.2508.1413" timestamp="1578149375041" />
+  </component>
+</project>

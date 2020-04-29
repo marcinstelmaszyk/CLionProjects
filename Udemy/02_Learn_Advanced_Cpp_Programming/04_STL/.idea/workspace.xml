@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="04_STL" targetName="04_STL" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="87ec9ea6-7dc9-48fd-b65d-284fed249625" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1Zz1ZpAxNPclJYFE9owsqs6andv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../07_Google_Test" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="CMake Application.04_STL">
+    <configuration name="ArabicToRomanNumeralsConverterTestCase.PreparationsComplete" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="04_STL" TARGET_NAME="04_STL" RUN_TARGET_PROJECT_NAME="04_STL" RUN_TARGET_NAME="04_STL" TEST_CLASS="ArabicToRomanNumeralsConverterTestCase" TEST_METHOD="PreparationsComplete" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="04_STL" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="04_STL" TARGET_NAME="04_STL" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="04_STL" RUN_TARGET_NAME="04_STL">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Google Test.ArabicToRomanNumeralsConverterTestCase.PreparationsComplete" />
+      <item itemvalue="CMake Application.04_STL" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.ArabicToRomanNumeralsConverterTestCase.PreparationsComplete" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87ec9ea6-7dc9-48fd-b65d-284fed249625" name="Default Changelist" comment="" />
+      <created>1585827166136</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585827166136</updated>
+      <workItem from="1585827168078" duration="6253000" />
+      <workItem from="1585896103827" duration="7345000" />
+      <workItem from="1586000166387" duration="4540000" />
+      <workItem from="1586371282200" duration="464000" />
+      <workItem from="1586371755068" duration="313000" />
+      <workItem from="1586372077477" duration="10907000" />
+      <workItem from="1586774067918" duration="59000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="350" y="452" width="465" height="583" key="#com.intellij.ide.util.MemberChooser" timestamp="1586417336080">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state x="350" y="452" width="465" height="583" key="#com.intellij.ide.util.MemberChooser/52.27.2508.1413@52.27.2508.1413" timestamp="1586417336080" />
+    <state x="438" y="480" width="424" height="520" key="FileChooserDialogImpl" timestamp="1586774124555">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state x="438" y="480" width="424" height="520" key="FileChooserDialogImpl/52.27.2508.1413@52.27.2508.1413" timestamp="1586774124555" />
+    <state width="1025" height="394" key="GridCell.Tab.0.bottom" timestamp="1586627802970">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state width="1025" height="394" key="GridCell.Tab.0.bottom/52.27.2508.1413@52.27.2508.1413" timestamp="1586627802970" />
+    <state width="1025" height="394" key="GridCell.Tab.0.center" timestamp="1586627802970">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state width="1025" height="394" key="GridCell.Tab.0.center/52.27.2508.1413@52.27.2508.1413" timestamp="1586627802970" />
+    <state width="1025" height="394" key="GridCell.Tab.0.left" timestamp="1586627802969">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state width="1025" height="394" key="GridCell.Tab.0.left/52.27.2508.1413@52.27.2508.1413" timestamp="1586627802969" />
+    <state width="1025" height="394" key="GridCell.Tab.0.right" timestamp="1586627802970">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state width="1025" height="394" key="GridCell.Tab.0.right/52.27.2508.1413@52.27.2508.1413" timestamp="1586627802970" />
+    <state x="154" y="368" width="1022" height="737" key="SettingsEditor" timestamp="1586372067185">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state x="154" y="368" width="1022" height="737" key="SettingsEditor/52.27.2508.1413@52.27.2508.1413" timestamp="1586372067185" />
+    <state x="328" y="349" width="672" height="678" key="search.everywhere.popup" timestamp="1585908824821">
+      <screen x="52" y="27" width="2508" height="1413" />
+    </state>
+    <state x="328" y="349" width="672" height="678" key="search.everywhere.popup/52.27.2508.1413@52.27.2508.1413" timestamp="1585908824821" />
+  </component>
+</project>
