@@ -3,7 +3,8 @@
 namespace btmap {
 
     Bitmap::Bitmap(int width, int height)
-            : width(width), height(height) {}
+            : width(width), height(height),
+              pPixels(new uint8_t[width*height*3]) {}
 
     bool Bitmap::write(std::string filename) {
         return false;

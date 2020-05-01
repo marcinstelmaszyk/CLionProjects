@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <memory>
 
 namespace btmap {
 
@@ -7,6 +8,7 @@ namespace btmap {
     private:
         int width{0};
         int height{0};
+        std::unique_ptr<uint8_t[]> pPixels{nullptr};
 
     public:
         Bitmap(int width, int height);
