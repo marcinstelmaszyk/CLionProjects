@@ -2,7 +2,7 @@
 #include <cstdint>
 
 
-namespace BitmapNamespace {
+namespace btmap {
 
     #pragma pack(push, 2)
     struct BitmapFileHeader {
