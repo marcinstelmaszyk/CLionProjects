@@ -1,3 +1,4 @@
+#include <fstream>
 #include "Bitmap.h"
 #include "BitmapInfoHeader.h"
 #include "BitmapFileHeader.h"
@@ -6,7 +7,7 @@ namespace btmap {
 
     Bitmap::Bitmap(int width, int height)
             : width(width), height(height),
-              pPixels(new uint8_t[width*height*3]{}) {}
+              pPixels(new uint8_t[width*height*3]{255}) {}
 
     bool Bitmap::write(std::string filename) {
         BitmapFileHeader fileHeader;
@@ -24,7 +25,19 @@ namespace btmap {
         infoHeader.width = width;
         infoHeader.height = height;
 
-        return false;
+        std::ofstream file;
+        file.open(filename, std::ios::out | std::ios::binary);
+
+        if (!file) {
+            return false;
+        }
+
+        file.write(reinterpret_cast<char*>(&fileHeader), sizeof(fileHeader));
+        file.write(reinterpret_cast<char*>(&infoHeader), sizeof(infoHeader));
+        file.write(reinterpret_cast<char*>(pPixels.get()), 3*height*width);
+
+        file.close();
+        return true;
     }
 
     void Bitmap::setPixel(int x, int y,
