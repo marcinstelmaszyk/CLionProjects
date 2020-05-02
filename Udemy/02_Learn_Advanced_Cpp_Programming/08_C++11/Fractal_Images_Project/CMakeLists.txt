@@ -3,4 +3,4 @@ project(Fractal_Images_Project)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Fractal_Images_Project main.cpp BitmapFileHeader.h BitmapInfoHeader.h Bitmap.cpp Bitmap.h Mandelbrot.cpp Mandelbrot.h)
+add_executable(Fractal_Images_Project main.cpp BitmapFileHeader.h BitmapInfoHeader.h Bitmap.cpp Bitmap.h Mandelbrot.cpp Mandelbrot.h Zoom.cpp Zoom.h ZoomList.cpp ZoomList.h)
