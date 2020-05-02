@@ -1,4 +1,6 @@
 #include <fstream>
+#include <iostream>
+
 #include "Bitmap.h"
 #include "BitmapInfoHeader.h"
 #include "BitmapFileHeader.h"
@@ -7,7 +9,7 @@ namespace btmap {
 
     Bitmap::Bitmap(int width, int height)
             : width(width), height(height),
-              pPixels(new uint8_t[width*height*3]{255}) {}
+              pPixels(new uint8_t[width*height*3]{}) {}
 
     bool Bitmap::write(std::string filename) {
         BitmapFileHeader fileHeader;
@@ -43,6 +45,14 @@ namespace btmap {
     void Bitmap::setPixel(int x, int y,
             uint8_t red, uint8_t green, uint8_t blue) {
 
+        // Set pointer to pixel's memory location
+        uint8_t *pPixel = pPixels.get();
+        pPixel += (3 * y * width) + 3 * x;
+
+        // Little endian used here
+        pPixel[0] = blue;
+        pPixel[1] = green;
+        pPixel[2] = red;
     }
 
 }
