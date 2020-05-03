@@ -1,4 +1,3 @@
-#include <iostream>
 #include "ZoomList.h"
 
 namespace btmap {
@@ -11,14 +10,14 @@ namespace btmap {
 
         xCenter += (zoom.x - width/2) * scale;
         yCenter += (zoom.y - height/2) * scale;
-
         scale *= zoom.scale;
-
-        std::cout << xCenter << ", " << yCenter << ", " << scale << std::endl;
     }
 
     std::pair<double, double> ZoomList::doZoom(int x, int y) {
-        return std::pair<double, double>(0, 0);
+        double xFractal = (x - width/2) * scale + xCenter;
+        double yFractal = (y - height/2) * scale + yCenter;
+
+        return std::pair<double, double>(xFractal, yFractal);
     }
 
 
