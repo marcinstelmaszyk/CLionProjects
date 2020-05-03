@@ -1,4 +1,5 @@
 #include <cmath>
+#include <iostream>
 
 #include "FractalCreator.h"
 #include "Mandelbrot.h"
@@ -85,13 +86,34 @@ namespace btmap {
 
     void FractalCreator::run(const std::string &filename) {
         calculateIteration();
+        calculateRangeTotals();
         drawFractal();
         writeBitmap(filename);
     }
 
-    void FractalCreator::addRange(int rangeEnd, const RGB &rgb) {
+    void FractalCreator::addRange(double rangeEnd, const RGB &rgb) {
         ranges.emplace_back(rangeEnd * Mandelbrot::MAX_ITERATIONS);
         colors.emplace_back(rgb);
+
+        if (gotFirstRange)
+            rangeTotals.push_back(0);
+
+        gotFirstRange = true;
+    }
+
+    void FractalCreator::calculateRangeTotals() {
+        int rangeIndex = 0;
+
+        for (int i = 0; i < Mandelbrot::MAX_ITERATIONS; ++i) {
+            int pixels = histogram[i];
+
+            if (i >= ranges[rangeIndex + 1])
+                rangeIndex++;
+
+            rangeTotals[rangeIndex] += pixels;
+        }
+        for (int value : rangeTotals)
+            std::cout << "Range total: " << value << std::endl;
     }
 
 }

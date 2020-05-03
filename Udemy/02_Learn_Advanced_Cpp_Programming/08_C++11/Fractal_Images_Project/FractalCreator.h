@@ -18,16 +18,20 @@ namespace btmap {
 
         std::vector<int> ranges;
         std::vector<RGB> colors;
+        std::vector<int> rangeTotals;
+
+        bool gotFirstRange{false};
     private:
         std::pair<int, int> getFractalSize() const;
         void calculateIteration();
+        void calculateRangeTotals();
         void drawFractal();
         void writeBitmap(const std::string& name);
         void addZoom(const Zoom& zoom);
     public:
         FractalCreator(int width, int height);
 
-        void addRange(int rangeEnd, const RGB& rgb);
+        void addRange(double rangeEnd, const RGB& rgb);
         void addZoom(int x, int y, double scale);
         void run(const std::string& filename);
     };
