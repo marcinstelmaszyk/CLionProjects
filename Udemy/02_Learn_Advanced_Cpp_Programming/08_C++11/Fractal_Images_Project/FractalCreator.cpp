@@ -89,5 +89,10 @@ namespace btmap {
         writeBitmap(filename);
     }
 
+    void FractalCreator::addRange(int rangeEnd, const RGB &rgb) {
+        ranges.emplace_back(rangeEnd * Mandelbrot::MAX_ITERATIONS);
+        colors.emplace_back(rgb);
+    }
+
 }
 

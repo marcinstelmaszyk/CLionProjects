@@ -5,6 +5,7 @@
 #include "Zoom.h"
 #include "Bitmap.h"
 #include "ZoomList.h"
+#include "RGB.h"
 
 namespace btmap {
 
@@ -15,6 +16,8 @@ namespace btmap {
         std::unique_ptr<int[]> fractal;
         int totalIterations{0};
 
+        std::vector<int> ranges;
+        std::vector<RGB> colors;
     private:
         std::pair<int, int> getFractalSize() const;
         void calculateIteration();
@@ -24,6 +27,7 @@ namespace btmap {
     public:
         FractalCreator(int width, int height);
 
+        void addRange(int rangeEnd, const RGB& rgb);
         void addZoom(int x, int y, double scale);
         void run(const std::string& filename);
     };
