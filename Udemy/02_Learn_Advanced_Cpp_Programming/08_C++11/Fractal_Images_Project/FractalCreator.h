@@ -28,6 +28,9 @@ namespace btmap {
         void drawFractal();
         void writeBitmap(const std::string& name);
         void addZoom(const Zoom& zoom);
+
+    public:
+        int getRange(int iterations) const;
     public:
         FractalCreator(int width, int height);
 

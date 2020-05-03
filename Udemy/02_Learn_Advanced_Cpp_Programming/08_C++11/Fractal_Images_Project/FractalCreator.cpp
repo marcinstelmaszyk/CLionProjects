@@ -50,28 +50,31 @@ namespace btmap {
     void FractalCreator::drawFractal() {
         auto dim = getFractalSize();
 
-        RGB startColor{0, 0, 0};
-        RGB endColor{0, 0, 255};
-        RGB colorDiff = endColor - startColor;
-
         for (int y = 0; y < dim.second; y++) {
             for (int x = 0; x < dim.first; x++) {
+                int iterations = fractal[y * dim.first + x];
+
+                int range = getRange(iterations);
+                int rangeTotal = rangeTotals[range];
+                int rangeStart = ranges[range];
+
+                RGB& startColor = colors[range];
+                RGB& endColor = colors[range + 1];
+                RGB colorDiff = endColor - startColor;
 
                 uint8_t red = 0;
                 uint8_t green = 0;
                 uint8_t blue = 0;
 
-                int iterations = fractal[y * dim.first + x];
-
                 if (iterations != Mandelbrot::MAX_ITERATIONS) {
-                    double hue = 0.0;
-                    for (int i = 0; i <= iterations; ++i) {
-                        hue += ((double) histogram[i]) / totalIterations;
+                    int totalPixels = 0;
+                    for (int i = rangeStart; i <= iterations; ++i) {
+                        totalPixels += histogram[i];
                     }
 
-                    red = startColor.r + colorDiff.r * hue;
-                    green = startColor.g + colorDiff.g * hue;
-                    blue = startColor.b + colorDiff.b * hue;
+                    red = startColor.r + colorDiff.r * (double)totalPixels/rangeTotal;
+                    green = startColor.g + colorDiff.g * (double)totalPixels/rangeTotal;
+                    blue = startColor.b + colorDiff.b * (double)totalPixels/rangeTotal;
                 }
 
                 bitmap.setPixel(x, y, red, green, blue);
@@ -114,6 +117,21 @@ namespace btmap {
         }
         for (int value : rangeTotals)
             std::cout << "Range total: " << value << std::endl;
+    }
+
+    int FractalCreator::getRange(int iterations) const {
+        int range = 0;
+
+        for (int i = 1; i < ranges.size(); ++i) {
+            range = i;
+
+            if (ranges[i] > iterations)
+                break;
+        }
+
+        range--;
+
+        return range;
     }
 
 }
