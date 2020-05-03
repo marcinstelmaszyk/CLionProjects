@@ -21,6 +21,7 @@ namespace btmap {
         void calculateIteration();
         void drawFractal();
         void addZoom(const Zoom& zoom);
+        void addZoom(int x, int y, double scale);
         void writeBitmap(std::string name);
     };
 

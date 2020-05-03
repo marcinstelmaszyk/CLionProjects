@@ -1,3 +1,5 @@
+#include <cmath>
+
 #include "FractalCreator.h"
 #include "Mandelbrot.h"
 
@@ -11,6 +13,10 @@ namespace btmap {
 
     void FractalCreator::addZoom(const Zoom &zoom) {
         zoomList.add(zoom);
+    }
+
+    void FractalCreator::addZoom(int x, int y, double scale) {
+        addZoom(Zoom(x, y, scale));
     }
 
     void FractalCreator::writeBitmap(std::string name) {
@@ -35,6 +41,32 @@ namespace btmap {
 
         for (int i = 0; i < Mandelbrot::MAX_ITERATIONS; ++i) {
             totalIterations += histogram[i];
+        }
+    }
+
+    void FractalCreator::drawFractal() {
+        auto dim = getFractalSize();
+
+        for (int y = 0; y < dim.second; y++) {
+            for (int x = 0; x < dim.first; x++) {
+
+                uint8_t red = 0;
+                uint8_t green = 0;
+                uint8_t blue = 0;
+
+                int iterations = fractal[y * dim.first + x];
+
+                if (iterations != Mandelbrot::MAX_ITERATIONS) {
+                    double hue = 0.0;
+                    for (int i = 0; i <= iterations; ++i) {
+                        hue += ((double) histogram[i]) / totalIterations;
+                    }
+
+                    green = pow(255, hue);
+                }
+
+                bitmap.setPixel(x, y, red, green, blue);
+            }
         }
     }
 
