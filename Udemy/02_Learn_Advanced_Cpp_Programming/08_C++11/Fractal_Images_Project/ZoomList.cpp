@@ -17,7 +17,7 @@ namespace btmap {
         double xFractal = (x - width/2) * scale + xCenter;
         double yFractal = (y - height/2) * scale + yCenter;
 
-        return std::pair<double, double>(xFractal, yFractal);
+        return {xFractal, yFractal};
     }
 
 

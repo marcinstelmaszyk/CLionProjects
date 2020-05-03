@@ -21,5 +21,10 @@ namespace btmap {
 
     }
 
+    std::pair<int, int> FractalCreator::getFractalSize() const {
+        auto dimensions = bitmap.dimensions();
+        return {dimensions.first, dimensions.second};
+    }
+
 }
 

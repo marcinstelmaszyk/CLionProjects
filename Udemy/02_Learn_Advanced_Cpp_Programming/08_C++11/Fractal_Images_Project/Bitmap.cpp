@@ -55,4 +55,8 @@ namespace btmap {
         pPixel[2] = red;
     }
 
+    std::pair<int, int> Bitmap::dimensions() const {
+        return {width, height};
+    }
+
 }
