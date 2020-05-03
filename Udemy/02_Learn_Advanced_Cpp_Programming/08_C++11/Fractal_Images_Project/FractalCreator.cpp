@@ -2,6 +2,7 @@
 
 #include "FractalCreator.h"
 #include "Mandelbrot.h"
+#include "RGB.h"
 
 namespace btmap {
 
@@ -48,6 +49,10 @@ namespace btmap {
     void FractalCreator::drawFractal() {
         auto dim = getFractalSize();
 
+        RGB startColor{0, 0, 0};
+        RGB endColor{0, 0, 255};
+        RGB colorDiff = endColor - startColor;
+
         for (int y = 0; y < dim.second; y++) {
             for (int x = 0; x < dim.first; x++) {
 
@@ -63,7 +68,9 @@ namespace btmap {
                         hue += ((double) histogram[i]) / totalIterations;
                     }
 
-                    green = pow(255, hue);
+                    red = startColor.r + colorDiff.r * hue;
+                    green = startColor.g + colorDiff.g * hue;
+                    blue = startColor.b + colorDiff.b * hue;
                 }
 
                 bitmap.setPixel(x, y, red, green, blue);
@@ -77,11 +84,6 @@ namespace btmap {
     }
 
     void FractalCreator::run(const std::string &filename) {
-        auto dim = getFractalSize();
-
-        addZoom(295, dim.second - 202, 0.1);
-        addZoom(312, dim.second - 304, 0.1);
-
         calculateIteration();
         drawFractal();
         writeBitmap(filename);

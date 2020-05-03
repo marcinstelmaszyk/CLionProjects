@@ -14,16 +14,18 @@ namespace btmap {
         std::unique_ptr<int[]> histogram;
         std::unique_ptr<int[]> fractal;
         int totalIterations{0};
-    public:
-        FractalCreator(int width, int height);
 
-        void run(const std::string& filename);
+    private:
         std::pair<int, int> getFractalSize() const;
         void calculateIteration();
         void drawFractal();
-        void addZoom(const Zoom& zoom);
-        void addZoom(int x, int y, double scale);
         void writeBitmap(const std::string& name);
+        void addZoom(const Zoom& zoom);
+    public:
+        FractalCreator(int width, int height);
+
+        void addZoom(int x, int y, double scale);
+        void run(const std::string& filename);
     };
 
 }

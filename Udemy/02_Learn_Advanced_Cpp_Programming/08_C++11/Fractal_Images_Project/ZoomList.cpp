@@ -9,7 +9,7 @@ namespace btmap {
         zooms.emplace_back(zoom);
 
         xCenter += (zoom.x - width/2) * scale;
-        yCenter += (zoom.y - height/2) * scale;
+        yCenter -= (zoom.y - height/2) * scale;
         scale *= zoom.scale;
     }
 
