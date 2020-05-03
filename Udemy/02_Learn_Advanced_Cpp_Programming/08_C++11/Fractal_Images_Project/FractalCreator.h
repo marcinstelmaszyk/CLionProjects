@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+
 #include "Zoom.h"
 #include "Bitmap.h"
 #include "ZoomList.h"
@@ -8,7 +9,6 @@
 namespace btmap {
 
     class FractalCreator {
-    public:
         Bitmap bitmap;
         ZoomList zoomList;
         std::unique_ptr<int[]> histogram;
@@ -22,7 +22,7 @@ namespace btmap {
         void drawFractal();
         void addZoom(const Zoom& zoom);
         void addZoom(int x, int y, double scale);
-        void writeBitmap(std::string name);
+        void writeBitmap(const std::string& name);
     };
 
 }

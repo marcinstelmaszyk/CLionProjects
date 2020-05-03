@@ -9,6 +9,7 @@ namespace btmap {
         : bitmap(width, height), zoomList(width, height),
           histogram(new int[Mandelbrot::MAX_ITERATIONS + 1]{0}),
           fractal(new int[width*height]{0}) {
+        addZoom(width / 2, height / 2, 4.0 / width);
     }
 
     void FractalCreator::addZoom(const Zoom &zoom) {
@@ -19,7 +20,7 @@ namespace btmap {
         addZoom(Zoom(x, y, scale));
     }
 
-    void FractalCreator::writeBitmap(std::string name) {
+    void FractalCreator::writeBitmap(const std::string& name) {
         bitmap.write(name);
     }
 

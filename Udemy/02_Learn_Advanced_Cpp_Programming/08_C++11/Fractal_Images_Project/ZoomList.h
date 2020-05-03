@@ -18,7 +18,7 @@ namespace btmap {
     public:
         ZoomList(int w, int h);
         void add(const Zoom& zoom);
-        std::pair<double, double> doZoom(int x, int y);
+        std::pair<double, double> doZoom(int x, int y) const;
     };
 
 }

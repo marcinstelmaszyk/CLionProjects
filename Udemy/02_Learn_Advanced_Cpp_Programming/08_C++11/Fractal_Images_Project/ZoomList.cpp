@@ -13,7 +13,7 @@ namespace btmap {
         scale *= zoom.scale;
     }
 
-    std::pair<double, double> ZoomList::doZoom(int x, int y) {
+    std::pair<double, double> ZoomList::doZoom(int x, int y) const {
         double xFractal = (x - width/2) * scale + xCenter;
         double yFractal = (y - height/2) * scale + yCenter;
 
