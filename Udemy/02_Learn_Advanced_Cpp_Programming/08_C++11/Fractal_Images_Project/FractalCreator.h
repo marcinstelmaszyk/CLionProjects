@@ -13,7 +13,7 @@ namespace btmap {
         ZoomList zoomList;
         std::unique_ptr<int[]> histogram;
         std::unique_ptr<int[]> fractal;
-
+        int totalIterations{0};
     public:
         FractalCreator(int width, int height);
 

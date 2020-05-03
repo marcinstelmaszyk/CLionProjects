@@ -18,7 +18,24 @@ namespace btmap {
     }
 
     void FractalCreator::calculateIteration() {
+        auto dim = getFractalSize();
 
+        for (int y = 0; y < dim.second; y++) {
+            for (int x = 0; x < dim.first; x++){
+                auto coords = zoomList.doZoom(x, y);
+
+                int iterations = Mandelbrot::getIterations(coords.first, coords.second);
+
+                fractal[y * dim.first + x] = iterations;
+
+                if (iterations != Mandelbrot::MAX_ITERATIONS)
+                    histogram[iterations]++;
+            }
+        }
+
+        for (int i = 0; i < Mandelbrot::MAX_ITERATIONS; ++i) {
+            totalIterations += histogram[i];
+        }
     }
 
     std::pair<int, int> FractalCreator::getFractalSize() const {

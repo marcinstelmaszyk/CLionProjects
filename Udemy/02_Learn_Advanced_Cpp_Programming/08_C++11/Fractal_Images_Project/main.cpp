@@ -19,23 +19,7 @@ int main() {
     mandelbrotFractal.addZoom(Zoom(295, HEIGHT - 202, 0.1));
     mandelbrotFractal.addZoom(Zoom(312, HEIGHT - 304, 0.1));
 
-    for (int y = 0; y < HEIGHT; y++) {
-        for (int x = 0; x < WIDTH; x++){
-            pair<double, double> coords = mandelbrotFractal.zoomList.doZoom(x, y);
-
-            int iterations = Mandelbrot::getIterations(coords.first, coords.second);
-
-            mandelbrotFractal.fractal[y*WIDTH+x] = iterations;
-
-            if (iterations != Mandelbrot::MAX_ITERATIONS)
-                mandelbrotFractal.histogram[iterations]++;
-        }
-    }
-
-    int total = 0;
-    for (int i = 0; i < Mandelbrot::MAX_ITERATIONS; ++i) {
-        total += mandelbrotFractal.histogram[i];
-    }
+    mandelbrotFractal.calculateIteration();
 
     for (int y = 0; y < HEIGHT; y++) {
         for (int x = 0; x < WIDTH; x++) {
@@ -49,7 +33,7 @@ int main() {
             if (iterations != Mandelbrot::MAX_ITERATIONS) {
                 double hue = 0.0;
                 for (int i = 0; i <= iterations; ++i) {
-                    hue += ((double) mandelbrotFractal.histogram[i]) / total;
+                    hue += ((double) mandelbrotFractal.histogram[i]) / mandelbrotFractal.totalIterations;
                 }
 
                 green = pow(255, hue);
