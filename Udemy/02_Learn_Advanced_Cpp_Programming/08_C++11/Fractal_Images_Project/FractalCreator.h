@@ -11,6 +11,9 @@ namespace btmap {
     public:
         Bitmap bitmap;
         ZoomList zoomList;
+        std::unique_ptr<int[]> histogram;
+        std::unique_ptr<int[]> fractal;
+
     public:
         FractalCreator(int width, int height);
 

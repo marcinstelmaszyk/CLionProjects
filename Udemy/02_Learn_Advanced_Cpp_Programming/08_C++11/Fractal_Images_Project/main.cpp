@@ -19,25 +19,22 @@ int main() {
     mandelbrotFractal.addZoom(Zoom(295, HEIGHT - 202, 0.1));
     mandelbrotFractal.addZoom(Zoom(312, HEIGHT - 304, 0.1));
 
-    unique_ptr<int[]> histogram(new int[Mandelbrot::MAX_ITERATIONS + 1]{0});
-    unique_ptr<int[]> fractal(new int[WIDTH*HEIGHT]{0});
-
     for (int y = 0; y < HEIGHT; y++) {
         for (int x = 0; x < WIDTH; x++){
             pair<double, double> coords = mandelbrotFractal.zoomList.doZoom(x, y);
 
             int iterations = Mandelbrot::getIterations(coords.first, coords.second);
 
-            fractal[y*WIDTH+x] = iterations;
+            mandelbrotFractal.fractal[y*WIDTH+x] = iterations;
 
             if (iterations != Mandelbrot::MAX_ITERATIONS)
-                histogram[iterations]++;
+                mandelbrotFractal.histogram[iterations]++;
         }
     }
 
     int total = 0;
     for (int i = 0; i < Mandelbrot::MAX_ITERATIONS; ++i) {
-        total += histogram[i];
+        total += mandelbrotFractal.histogram[i];
     }
 
     for (int y = 0; y < HEIGHT; y++) {
@@ -47,12 +44,12 @@ int main() {
             uint8_t green = 0;
             uint8_t blue = 0;
 
-            int iterations = fractal[y*WIDTH+x];
+            int iterations = mandelbrotFractal.fractal[y*WIDTH+x];
 
             if (iterations != Mandelbrot::MAX_ITERATIONS) {
                 double hue = 0.0;
                 for (int i = 0; i <= iterations; ++i) {
-                    hue += ((double) histogram[i]) / total;
+                    hue += ((double) mandelbrotFractal.histogram[i]) / total;
                 }
 
                 green = pow(255, hue);
