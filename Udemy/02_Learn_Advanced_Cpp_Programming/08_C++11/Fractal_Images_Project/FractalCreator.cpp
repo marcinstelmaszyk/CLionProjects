@@ -76,5 +76,16 @@ namespace btmap {
         return {dimensions.first, dimensions.second};
     }
 
+    void FractalCreator::run(const std::string &filename) {
+        auto dim = getFractalSize();
+
+        addZoom(295, dim.second - 202, 0.1);
+        addZoom(312, dim.second - 304, 0.1);
+
+        calculateIteration();
+        drawFractal();
+        writeBitmap(filename);
+    }
+
 }
 

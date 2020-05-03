@@ -17,6 +17,7 @@ namespace btmap {
     public:
         FractalCreator(int width, int height);
 
+        void run(const std::string& filename);
         std::pair<int, int> getFractalSize() const;
         void calculateIteration();
         void drawFractal();
