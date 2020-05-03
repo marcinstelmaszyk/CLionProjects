@@ -3,12 +3,14 @@
 #include <string>
 #include "Zoom.h"
 #include "Bitmap.h"
+#include "ZoomList.h"
 
 namespace btmap {
 
     class FractalCreator {
     public:
         Bitmap bitmap;
+        ZoomList zoomList;
     public:
         FractalCreator(int width, int height);
 
