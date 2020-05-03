@@ -4,6 +4,7 @@
 #include "Bitmap.h"
 #include "Mandelbrot.h"
 #include "ZoomList.h"
+#include "FractalCreator.h"
 
 using namespace std;
 using namespace btmap;
@@ -12,7 +13,7 @@ int main() {
     const int WIDTH = 800;
     const int HEIGHT = 600;
 
-    Bitmap bitmap(WIDTH, HEIGHT);
+    FractalCreator mandelbrotFractal{WIDTH, HEIGHT};
 
     double min = 999999;
     double max = -999999;
@@ -61,11 +62,11 @@ int main() {
                 green = pow(255, hue);
             }
 
-            bitmap.setPixel(x, y, red, green, blue);
+            mandelbrotFractal.bitmap.setPixel(x, y, red, green, blue);
         }
     }
 
-    bitmap.write("test.bmp");
+    mandelbrotFractal.bitmap.write("test.bmp");
 
     std::cout << "Finished." << std::endl;
     return 0;
