@@ -61,8 +61,7 @@ int main() {
             mandelbrotFractal.bitmap.setPixel(x, y, red, green, blue);
         }
     }
-
-    mandelbrotFractal.bitmap.write("test.bmp");
+    mandelbrotFractal.writeBitmap("test.bmp");
 
     std::cout << "Finished." << std::endl;
     return 0;

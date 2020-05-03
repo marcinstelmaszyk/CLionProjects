@@ -9,4 +9,9 @@ namespace btmap {
         zoomList.add(zoom);
     }
 
+    void FractalCreator::writeBitmap(std::string name) {
+        bitmap.write(name);
+    }
+
 }
+
